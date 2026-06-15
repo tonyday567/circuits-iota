@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" font-family="monospace">
+<rect width="1200" height="680" fill="white"/>
+<text x="40.0" y="22" font-size="16" fill="#333">Monoid.plus — Peano addition (fan-in, 39 nodes)</text>
+<line x1="291.8" y1="64.0" x2="68.0" y2="128.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="291.8" y1="64.0" x2="515.6" y2="128.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="515.6" y1="128.0" x2="211.5" y2="192.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="515.6" y1="128.0" x2="819.6" y2="192.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="819.6" y1="192.0" x2="570.2" y2="256.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="819.6" y1="192.0" x2="1069.0" y2="256.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="1069.0" y1="256.0" x2="1006.0" y2="320.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="1069.0" y1="256.0" x2="1132.0" y2="320.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="1006.0" y1="320.0" x2="964.0" y2="384.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="1006.0" y1="320.0" x2="1048.0" y2="384.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="1048.0" y1="384.0" x2="1020.0" y2="448.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="1048.0" y1="384.0" x2="1076.0" y2="448.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="570.2" y1="256.0" x2="460.0" y2="320.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="570.2" y1="256.0" x2="680.5" y2="320.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="680.5" y1="320.0" x2="558.0" y2="384.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="680.5" y1="320.0" x2="803.0" y2="384.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="803.0" y1="384.0" x2="726.0" y2="448.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="803.0" y1="384.0" x2="880.0" y2="448.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="880.0" y1="448.0" x2="852.0" y2="512.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="880.0" y1="448.0" x2="908.0" y2="512.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="726.0" y1="448.0" x2="684.0" y2="512.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="726.0" y1="448.0" x2="768.0" y2="512.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="768.0" y1="512.0" x2="740.0" y2="576.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="768.0" y1="512.0" x2="796.0" y2="576.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="558.0" y1="384.0" x2="516.0" y2="448.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="558.0" y1="384.0" x2="600.0" y2="448.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="600.0" y1="448.0" x2="572.0" y2="512.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="600.0" y1="448.0" x2="628.0" y2="512.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="211.5" y1="192.0" x2="124.0" y2="256.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="211.5" y1="192.0" x2="299.0" y2="256.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="299.0" y1="256.0" x2="222.0" y2="320.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="299.0" y1="256.0" x2="376.0" y2="320.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="376.0" y1="320.0" x2="348.0" y2="384.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="376.0" y1="320.0" x2="404.0" y2="384.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="222.0" y1="320.0" x2="180.0" y2="384.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="222.0" y1="320.0" x2="264.0" y2="384.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="264.0" y1="384.0" x2="236.0" y2="448.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="264.0" y1="384.0" x2="292.0" y2="448.0" stroke="#aaa" stroke-width="1.5"/>
+<circle cx="291.8" cy="64.0" r="6" fill="#888"/>
+<circle cx="515.6" cy="128.0" r="6" fill="#888"/>
+<circle cx="819.6" cy="192.0" r="6" fill="#888"/>
+<circle cx="1069.0" cy="256.0" r="6" fill="#888"/>
+<circle cx="1132.0" cy="320.0" r="15" fill="#3b78e8"/>
+<text x="1132.0" y="325.0" font-size="15" text-anchor="middle" fill="#fff">I</text>
+<circle cx="1006.0" cy="320.0" r="6" fill="#888"/>
+<circle cx="1048.0" cy="384.0" r="6" fill="#888"/>
+<circle cx="1076.0" cy="448.0" r="15" fill="#3b78e8"/>
+<text x="1076.0" y="453.0" font-size="15" text-anchor="middle" fill="#fff">C</text>
+<circle cx="1020.0" cy="448.0" r="15" fill="#3b78e8"/>
+<text x="1020.0" y="453.0" font-size="15" text-anchor="middle" fill="#fff">K</text>
+<circle cx="964.0" cy="384.0" r="15" fill="#3b78e8"/>
+<text x="964.0" y="389.0" font-size="15" text-anchor="middle" fill="#fff">S</text>
+<circle cx="570.2" cy="256.0" r="6" fill="#888"/>
+<circle cx="680.5" cy="320.0" r="6" fill="#888"/>
+<circle cx="803.0" cy="384.0" r="6" fill="#888"/>
+<circle cx="880.0" cy="448.0" r="6" fill="#888"/>
+<circle cx="908.0" cy="512.0" r="15" fill="#3b78e8"/>
+<text x="908.0" y="517.0" font-size="15" text-anchor="middle" fill="#fff">J</text>
+<circle cx="852.0" cy="512.0" r="15" fill="#3b78e8"/>
+<text x="852.0" y="517.0" font-size="15" text-anchor="middle" fill="#fff">K</text>
+<circle cx="726.0" cy="448.0" r="6" fill="#888"/>
+<circle cx="768.0" cy="512.0" r="6" fill="#888"/>
+<circle cx="796.0" cy="576.0" r="15" fill="#3b78e8"/>
+<text x="796.0" y="581.0" font-size="15" text-anchor="middle" fill="#fff">B</text>
+<circle cx="740.0" cy="576.0" r="15" fill="#3b78e8"/>
+<text x="740.0" y="581.0" font-size="15" text-anchor="middle" fill="#fff">K</text>
+<circle cx="684.0" cy="512.0" r="15" fill="#3b78e8"/>
+<text x="684.0" y="517.0" font-size="15" text-anchor="middle" fill="#fff">S</text>
+<circle cx="558.0" cy="384.0" r="6" fill="#888"/>
+<circle cx="600.0" cy="448.0" r="6" fill="#888"/>
+<circle cx="628.0" cy="512.0" r="15" fill="#3b78e8"/>
+<text x="628.0" y="517.0" font-size="15" text-anchor="middle" fill="#fff">B</text>
+<circle cx="572.0" cy="512.0" r="15" fill="#3b78e8"/>
+<text x="572.0" y="517.0" font-size="15" text-anchor="middle" fill="#fff">K</text>
+<circle cx="516.0" cy="448.0" r="15" fill="#3b78e8"/>
+<text x="516.0" y="453.0" font-size="15" text-anchor="middle" fill="#fff">S</text>
+<circle cx="460.0" cy="320.0" r="15" fill="#3b78e8"/>
+<text x="460.0" y="325.0" font-size="15" text-anchor="middle" fill="#fff">S</text>
+<circle cx="211.5" cy="192.0" r="6" fill="#888"/>
+<circle cx="299.0" cy="256.0" r="6" fill="#888"/>
+<circle cx="376.0" cy="320.0" r="6" fill="#888"/>
+<circle cx="404.0" cy="384.0" r="15" fill="#3b78e8"/>
+<text x="404.0" y="389.0" font-size="15" text-anchor="middle" fill="#fff">S</text>
+<circle cx="348.0" cy="384.0" r="15" fill="#3b78e8"/>
+<text x="348.0" y="389.0" font-size="15" text-anchor="middle" fill="#fff">K</text>
+<circle cx="222.0" cy="320.0" r="6" fill="#888"/>
+<circle cx="264.0" cy="384.0" r="6" fill="#888"/>
+<circle cx="292.0" cy="448.0" r="15" fill="#3b78e8"/>
+<text x="292.0" y="453.0" font-size="15" text-anchor="middle" fill="#fff">C</text>
+<circle cx="236.0" cy="448.0" r="15" fill="#3b78e8"/>
+<text x="236.0" y="453.0" font-size="15" text-anchor="middle" fill="#fff">K</text>
+<circle cx="180.0" cy="384.0" r="15" fill="#3b78e8"/>
+<text x="180.0" y="389.0" font-size="15" text-anchor="middle" fill="#fff">S</text>
+<circle cx="124.0" cy="256.0" r="15" fill="#3b78e8"/>
+<text x="124.0" y="261.0" font-size="15" text-anchor="middle" fill="#fff">S</text>
+<circle cx="68.0" cy="128.0" r="15" fill="#3b78e8"/>
+<text x="68.0" y="133.0" font-size="15" text-anchor="middle" fill="#fff">Y</text>
+</svg>

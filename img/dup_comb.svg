@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="248" height="296" viewBox="0 0 248 296" font-family="monospace">
+<rect width="248" height="296" fill="white"/>
+<text x="40.0" y="22" font-size="16" fill="#333">Comonoid.copy — fan-out (5 nodes)</text>
+<line x1="138.0" y1="64.0" x2="96.0" y2="128.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="138.0" y1="64.0" x2="180.0" y2="128.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="96.0" y1="128.0" x2="68.0" y2="192.0" stroke="#aaa" stroke-width="1.5"/>
+<line x1="96.0" y1="128.0" x2="124.0" y2="192.0" stroke="#aaa" stroke-width="1.5"/>
+<circle cx="138.0" cy="64.0" r="6" fill="#888"/>
+<circle cx="180.0" cy="128.0" r="15" fill="#3b78e8"/>
+<text x="180.0" y="133.0" font-size="15" text-anchor="middle" fill="#fff">I</text>
+<circle cx="96.0" cy="128.0" r="6" fill="#888"/>
+<circle cx="124.0" cy="192.0" r="15" fill="#3b78e8"/>
+<text x="124.0" y="197.0" font-size="15" text-anchor="middle" fill="#fff">P</text>
+<circle cx="68.0" cy="192.0" r="15" fill="#3b78e8"/>
+<text x="68.0" y="197.0" font-size="15" text-anchor="middle" fill="#fff">S</text>
+</svg>
