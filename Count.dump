@@ -1,0 +1,9 @@
+Count.Z = K
+Count.S = J
+Count.F = K
+Count.T = A
+Count.Left = L
+Count.Right = J
+Count.le = ((C'B (U Count.T)) ((C'B (U Count.F)) Count.le))
+Count.step = ((P ((S ((S ((C Count.le) (Count.S (Count.S (Count.S (Count.S (Count.S (Count.S (Count.S (Count.S (Count.S (Count.S Count.Z)))))))))))) Count.Right)) ((B Count.Left) Count.S))) (K (Count.Left Count.Z)))
+Count.counter = (Circuit.Circuit.Knot (Circuit.Circuit.Lift Count.step))

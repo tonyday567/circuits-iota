@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>circuits-iota — combinator trees for Circuit programs</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --border: #30363d;
+    --text: #c9d1d9;
+    --muted: #8b949e;
+    --accent: #58a6ff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.5;
+    padding: 2rem;
+  }
+  h1 { font-size: 1.5rem; margin-bottom: 0.25rem; }
+  h2 { font-size: 1.1rem; color: var(--accent); margin: 2rem 0 1rem; }
+  .subtitle { color: var(--muted); margin-bottom: 2rem; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 1.5rem;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .card img {
+    width: 100%;
+    display: block;
+  }
+  .card-body {
+    padding: 1rem;
+  }
+  .card-body h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+  }
+  .card-body .meta {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+  }
+  .card-body p {
+    font-size: 0.85rem;
+    color: var(--text);
+  }
+  .wide { grid-column: 1 / -1; }
+  pre {
+    background: #0d1117;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1rem;
+    overflow-x: auto;
+    font-size: 0.8rem;
+    margin: 1rem 0;
+  }
+  code { font-family: 'SF Mono', 'Fira Code', monospace; }
+  .box { color: #f0883e; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<h1>circuits-iota</h1>
+<p class="subtitle">
+  Compiling Circuit programs through MicroHs to combinator trees and iota mandalas.
+  Pipeline: <code>Circuit.hs → gmhs -ddump-combinator → iota → treedraw.py → PNG</code>
+</p>
+
+<h2>Program: count to ten</h2>
+
+<pre><code><span class="box">Knot</span> (<span class="box">Lift</span> step)
+
+step :: Either Nat Nat → Either Nat Nat
+step (Left n)  = <b>if</b> n ≤ 10 <b>then</b> Left (n+1) <b>else</b> Right n
+step (Right n) = Left Z
+
+le :: Nat → Nat → Bool     <span style="color: var(--muted)">— Peano less-than-or-equal</span>
+</code></pre>
+
+<p style="color: var(--muted); margin-bottom: 2rem;">
+  Three opaque boxes (<span class="box">Knot</span>, <span class="box">Lift</span>, <span class="box">L</span>)
+  wrapping 83 nodes of pure combinator computation.
+</p>
+
+<div class="grid">
+
+  <div class="card">
+    <img src="img/counter_comb.png" alt="counter">
+    <div class="card-body">
+      <h3>Count.counter — full circuit</h3>
+      <div class="meta">87 nodes · top-down</div>
+      <p>
+        The complete expression <code>Knot (Lift step)</code>.
+        The <span class="box">Knot</span> and <span class="box">Lift</span> boxes
+        are the Circuit GADT constructors — opaque data, not combinators.
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="img/step_comb.png" alt="step">
+    <div class="card-body">
+      <h3>Count.step — the loop body</h3>
+      <div class="meta">83 nodes · top-down</div>
+      <p>
+        The step function stripped of its Circuit wrapper.
+        One <span class="box">L</span> box (Either's Left injection) — everything
+        else is pure combinators: <code>S</code>, <code>K</code>, <code>I</code>,
+        <code>C</code>, <code>B</code>, <code>Y</code>.
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="img/le_comb.png" alt="le combinator">
+    <div class="card-body">
+      <h3>Count.le — less-than-or-equal</h3>
+      <div class="meta">39 nodes · top-down · <strong>pure</strong></div>
+      <p>
+        Peano comparison: <code>le Z _ = T; le (S _) Z = F; le (S m) (S n) = le m n</code>.
+        Recursive via <code>Y</code> fixpoint. Every leaf is a pure combinator — no primitives.
+      </p>
+    </div>
+  </div>
+
+  <div class="card wide">
+    <img src="img/le_iota.png" alt="le iota mandala" style="max-height: 70vh; object-fit: contain;">
+    <div class="card-body">
+      <h3>Count.le — iota mandala</h3>
+      <div class="meta">1,129 symbols · radial · <strong>pure</strong></div>
+      <p>
+        The same <code>le</code> function compiled to Barker's Iota:
+        <code>ι = λf.f S K</code>, the single-combinator universal basis.
+        Every edge is <code>0</code> (apply) or <code>1</code> (ι).
+        Radial layout — root at center, depth coded by edge colour.
+        This is the computation with everything stripped away: no data types,
+        no pattern matching, no control flow. Just application and one combinator.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<h2>What this shows</h2>
+
+<p>
+  The Circuit GADT (<span class="box">Lift</span>, <span class="box">Compose</span>,
+  <span class="box">Knot</span>) is a <em>wrapper</em> — 2 nodes of overhead that let you
+  inspect, meter, and transform before closing. The real computation lives inside
+  <code>Lift</code> as a base-arrow function. When that function is primitive-free,
+  it compiles to pure combinators with a measurable iota size.
+</p>
+
+<p style="margin-top: 1rem;">
+  <code>reify</code> costs more than <code>encode</code> (dictionary passing adds
+  ~6 nodes per circuit). <code>encode</code> via Hyper is tighter but still opaque
+  to MicroHs — the combinator renderer can't inline through it. For now, the best
+  view is to dump the step function directly, skipping the Circuit wrapper.
+</p>
+
+<p style="color: var(--muted); margin-top: 2rem; font-size: 0.8rem;">
+  Generated by circuits-iota · MicroHs (augustss) · iota-render (Tritlo) · June 2026
+</p>
+
+</body>
+</html>
